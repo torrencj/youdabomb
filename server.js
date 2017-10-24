@@ -8,5 +8,9 @@ var app = express();
 // Specify the port.
 var port = process.env.PORT || 8000;
 
-app.use(express.static('views/layouts/public'))
+app.use(express.static('./public'))
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.listen(port, function() {
+  console.log("Listening on port " + port);
+})
